@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
   overflow-x: hidden;
 }
 
@@ -53,21 +53,22 @@ header:hover {
 }
 
 .logo {
-  color: #14203E3D;
+  color: #14203E;
   font-weight: bold;
   font-size: 18px;
   transition: color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
+  opacity: 0.7;
 }
 
 .logo:hover {
-  color: #14203E;
+  opacity: 1;
   transform: scale(1.05);
 }
 
 nav {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   flex-wrap: wrap;
   justify-content: center;
   margin-left: 1%;
@@ -81,7 +82,7 @@ nav {
 
 button {
   font-family: inherit;
-  padding: 10px 16px;
+  padding: 12px 20px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
@@ -89,6 +90,8 @@ button {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 button::before {
@@ -141,6 +144,7 @@ button.start:hover {
   background-color: #FFFCF8;
   justify-content: center;
   animation: fadeIn 1s ease-in;
+  min-height: 60vh;
 }
 
 @keyframes fadeIn {
@@ -157,6 +161,7 @@ button.start:hover {
 .main-content .text {
   text-align: center;
   padding: 30px;
+  max-width: 800px;
 }
 
 .main-content .text h1 {
@@ -164,6 +169,7 @@ button.start:hover {
   margin-bottom: 20px;
   color: #14203E;
   animation: slideDown 0.8s ease-out;
+  line-height: 1.2;
 }
 
 @keyframes slideDown {
@@ -180,8 +186,9 @@ button.start:hover {
 .main-content .text p {
   padding: 20px;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
-  line-height: 1.6;
+  line-height: 1.7;
   color: #14203E;
+  opacity: 0.8;
   animation: slideUp 0.8s ease-out 0.2s both;
 }
 
@@ -191,20 +198,21 @@ button.start:hover {
     transform: translateY(30px);
   }
   to {
-    opacity: 1;
+    opacity: 0.8;
     transform: translateY(0);
   }
 }
 
 .main-content .start2 {
-  height: 73px;
-  width: 192px;
+  padding: 20px 40px;
   background-color: #14203E;
   color: #F6F0E8;
   border-radius: 10px;
   font-size: 16px;
+  font-weight: 500;
   box-shadow: 0 4px 15px rgba(20, 32, 62, 0.3);
   animation: pulse 2s infinite;
+  margin-top: 20px;
 }
 
 @keyframes pulse {
@@ -228,7 +236,7 @@ button.start:hover {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 40px 20px;
+  padding: 60px 20px 40px;
   opacity: 0;
   animation: fadeIn 1s ease-in 0.5s forwards;
 }
@@ -246,7 +254,7 @@ button.start:hover {
 }
 
 .textt {
-  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
   font-weight: 600;
   line-height: 100%;
   padding: 0 20px;
@@ -257,10 +265,10 @@ button.start:hover {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   margin-top: 3%;
-  padding: 20px;
+  padding: 20px 20px 80px;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
@@ -269,11 +277,12 @@ button.start:hover {
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   background: white;
   opacity: 0;
   animation: cardFadeIn 0.6s ease-out forwards;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .card:nth-child(1) { animation-delay: 0.1s; }
@@ -302,6 +311,7 @@ button.start:hover {
   height: 231px;
   object-fit: cover;
   transition: transform 0.5s ease;
+  background-color: #f0f0f0;
 }
 
 .card:hover img {
@@ -310,7 +320,7 @@ button.start:hover {
 
 .card p {
   margin: 20px 15px 10px;
-  font-size: clamp(1rem, 2.5vw, 1.375rem);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   font-weight: 700;
   line-height: 1.4;
   color: #14203E;
@@ -323,10 +333,11 @@ button.start:hover {
 
 .card span {
   color: #14203E99;
-  font-size: 14px;
+  font-size: 13px;
   display: block;
   margin: 10px 15px 20px;
   transition: color 0.3s ease;
+  font-weight: 500;
 }
 
 .card:hover span {
@@ -365,7 +376,7 @@ button.start:hover {
   .grid-container {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 10px;
+    padding: 10px 10px 60px;
   }
   
   .line {
